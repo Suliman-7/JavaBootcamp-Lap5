@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @AllArgsConstructor
 @Data
@@ -16,9 +16,9 @@ public class Event {
     private int capacity ;
 
     @JsonFormat(pattern="yyyy-MM-dd")
-    private LocalDateTime startDate ;
+    private LocalDate startDate ;
     @JsonFormat(pattern="yyyy-MM-dd")
-    private LocalDateTime endDate ;
+    private LocalDate endDate ;
 
 
 }
