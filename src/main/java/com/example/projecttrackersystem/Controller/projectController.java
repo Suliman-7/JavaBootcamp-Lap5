@@ -41,8 +41,9 @@ public class projectController {
     public ApiResponse changeStatus(@PathVariable int index) {
         if(! projects.get(index).getStatus().equals("done")) {
             projects.get(index).setStatus("done");
+            return new ApiResponse("status changes successfully !", "200");
         }
-        return new ApiResponse("status changes successfully !", "200");
+        return new ApiResponse("status already done !", "200");
     }
 
     @GetMapping("search/{title}")
